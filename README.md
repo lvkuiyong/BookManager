@@ -2,10 +2,33 @@
 
 ### 框架使用
 
-后端：Java EE Servlet  
-数据库 ORM：Mybatis  
-前端：Thymeleaf  
+后端：Java EE Servlet  5.0.0
+
+数据库 ORM：Mybatis  3.5.7
+
+Web服务器：Tomcat 10.1.10
+
+前端：Thymeleaf  3.0.12
+
 UI 模板：Bootstrap  
+
+### Tomcat配置
+
+默认URL：http://localhost:8080/book_manager/login
+
+默认部署：war exploded
+
+应用程序上下文：/book_manager
+
+### Mybatis配置文件
+
+根据自己情况修改
+
+```xml
+<property name="url" value="jdbc:mysql://localhost:3306/book_manage"/>
+<property name="username" value="root"/>
+<property name="password" value="123456"/>
+```
 
 ### 数据库建立
 
