@@ -2,11 +2,11 @@
 
 ### 框架使用
 
-| 后端      | Java EE Servelt |
-| --------- | --------------- |
-| 数据库ORM | Mybatis         |
-| 前端      | Themeleaf       |
-| UI模板    | Bootstrap       |
+| **后端**      | **Java EE Servelt** |
+| ------------- | ------------------- |
+| **数据库ORM** | **Mybatis**         |
+| **前端**      | **Themeleaf**       |
+| **UI模板**    | **Bootstrap**       |
 
 ### 数据库建立
 
