@@ -21,7 +21,6 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class MvcConfiguration implements WebMvcConfigurer {
 
-    //我们需要使用ThymeleafViewResolver作为视图解析器，并解析我们的HTML页面
     @Bean
     public ThymeleafViewResolver thymeleafViewResolver(@Autowired SpringTemplateEngine springTemplateEngine){
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
@@ -31,7 +30,6 @@ public class MvcConfiguration implements WebMvcConfigurer {
         return resolver;
     }
 
-    //配置模板解析器
     @Bean
     public SpringResourceTemplateResolver templateResolver(){
         SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
@@ -41,7 +39,6 @@ public class MvcConfiguration implements WebMvcConfigurer {
         return resolver;
     }
 
-    //配置模板引擎Bean
     @Bean
     public SpringTemplateEngine springTemplateEngine(@Autowired ITemplateResolver resolver){
         SpringTemplateEngine engine = new SpringTemplateEngine();
@@ -50,13 +47,11 @@ public class MvcConfiguration implements WebMvcConfigurer {
         return engine;
     }
 
-    //开启静态资源处理
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
 
-    //静态资源路径配置
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/**").addResourceLocations("/WEB-INF/static/");
